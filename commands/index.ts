@@ -11,6 +11,8 @@ import Base64Decode from "./base64decode.ts";
 import MD5 from "./md5.ts";
 import SHA1 from "./sha1.ts";
 import Hash from "./hash.ts";
+import CM2Inch from "./cm2inch.ts";
+import Inch2CM from "./inch2cm.ts";
 
 const commands: { [command: string]: () => AbstractCommand } = Object.fromEntries(
   Object.entries({
@@ -24,6 +26,8 @@ const commands: { [command: string]: () => AbstractCommand } = Object.fromEntrie
     md5: MD5,
     sha1: SHA1,
     hash: Hash,
+    cm2inch: CM2Inch,
+    inch2cm: Inch2CM,
   }).map((entry) => [entry[0], () => new entry[1](entry[0])])
 );
 
