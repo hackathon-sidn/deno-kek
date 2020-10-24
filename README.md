@@ -6,7 +6,8 @@
 This module is a collection of simple scripts that a developer might find handy.
 To use it, simply type `deno run https://deno.land/x/kek/mod.ts --help` in your console and you will get an output like this:
 
-```
+```console
+$ deno run https://deno.land/x/kek/mod.ts --help
 List of commands and their description:
 
   test:           This command is for testing this deno module.
@@ -17,11 +18,12 @@ Syntax:
   deno run https://deno.land/x/kek/mod.ts <command>
 ```
 
-If you want to know what a specific comamnd can do and how to use it, simply type `deno run https://deno.land/x/kek/mod.ts COMMAND --help`.
+If you want to know what a specific command can do and how to use it, simply type `deno run https://deno.land/x/kek/mod.ts COMMAND --help`.
 
 For the command `test` this would result in the following:
 
-```
+```console
+$ deno run https://deno.land/x/kek/mod.ts test --help
 This command is for testing this deno module.
 
     test simply responds with the given command line arguments.
