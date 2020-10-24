@@ -37,6 +37,7 @@ This command is for testing this deno module.
 If you want to use _kek_ as a command in your PowerShell, simply do the following steps:
 
 1. Create a profile.ps1 file with the following input (you can change the version number of kek for your liking):
+
 ```ps1
 function kekCommand {
     deno run https://deno.land/x/kek/mod.ts $args
@@ -44,6 +45,7 @@ function kekCommand {
 
 Set-Alias kek kekCommand
 ```
+
 2. Save this file to either `$Home\Documents` (C:\Users\yourname\Documents) -- only your user will be able to use `kek` **OR** to `$PsHome` (C:\Windows\System32\WindowsPowerShell\v1.0) -- every PowerShell user will be able to use `kek`.
 3. Restart your PowerShell
 4. Profit
