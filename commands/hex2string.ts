@@ -19,8 +19,8 @@ export default class Hex2String extends AbstractCommand {
   }
 
   run(args: Args): void {
-    if (args.length < 1) {
-      console.error("You have to input at least one string.");
+    if (args._.length != 1) {
+      console.error("You have to pass exactly one string.");
       return;
     }
     const hexInput = args._[0].toString();

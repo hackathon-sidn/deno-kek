@@ -9,17 +9,15 @@ export default class String2Hex extends AbstractCommand {
     console.log(`
     ${this.getShortDescription()}
 
-    Warning: This utility has a super weird behaviour!
-
     Syntax:
       ${this.commandName} <string>
     `);
   }
   run(args: Args): void {
-    const string2: string = args._.reduce((text: string, arg: string | number) => text + arg.toString(), "");
+    const string: string = args._.reduce((text: string, arg: string | number) => text + arg.toString(), "");
     let hex = "0x";
-    for (let i = 0; i < string2.length; i++) {
-      hex += string2.charCodeAt(i).toString(16);
+    for (let i = 0; i < string.length; i++) {
+      hex += string.charCodeAt(i).toString(16);
     }
     console.log(hex);
   }
