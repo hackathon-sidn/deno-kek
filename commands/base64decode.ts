@@ -27,7 +27,7 @@ export default class Base64Decode extends AbstractCommand {
       const decodedString = atob(args._[0].toString());
       console.log(decodedString);
     } catch {
-      console.log("The provided string is not a valid base64 string");
+      console.log("Not a valid base64 string");
     }
   }
 }

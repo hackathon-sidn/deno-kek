@@ -24,8 +24,14 @@ export default class Hex2Int extends AbstractCommand {
       console.error("You have to pass exactly one hex value.");
       return;
     }
-    const hexInput = args._[0].toString();
-    const hex = hexInput.startsWith("0x") ? hexInput : "0x" + hexInput;
-    console.log(Number(hex).toString());
+    try {
+      const hexInput = args._[0].toString();
+      const hex = hexInput.startsWith("0x") ? hexInput : "0x" + hexInput;
+      const integer = Number(hex);
+      if (isNaN(integer)) throw new Error();
+      console.log(integer.toString());
+    } catch {
+      console.log("Not a valid hex value.");
+    }
   }
 }

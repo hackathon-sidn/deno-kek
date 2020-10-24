@@ -23,12 +23,18 @@ export default class Hex2String extends AbstractCommand {
       console.error("You have to pass exactly one string.");
       return;
     }
-    const hexInput = args._[0].toString();
-    const hex = hexInput.startsWith("0x") ? hexInput.slice(2) : hexInput;
-    let string = "";
-    for (let i = 0; i < hex.length; i += 2) {
-      string += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+    try {
+      const hexInput = args._[0].toString();
+      const hex = hexInput.startsWith("0x") ? hexInput.slice(2) : hexInput;
+      let string = "";
+      for (let i = 0; i < hex.length; i += 2) {
+        const integer = parseInt(hex.substr(i, 2), 16);
+        if (isNaN(integer)) throw new Error();
+        string += String.fromCharCode(integer);
+      }
+      console.log(string);
+    } catch {
+      console.log("Not a valid hex string.");
     }
-    console.log(string);
   }
 }

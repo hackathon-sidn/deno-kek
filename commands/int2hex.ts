@@ -24,7 +24,12 @@ export default class Int2Hex extends AbstractCommand {
       console.error("You have to pass exactly one integer.");
       return;
     }
-    const integer = Number(args._[0]);
-    console.log(integer.toString(16));
+    try {
+      const integer = Number(args._[0]);
+      if (isNaN(integer)) throw new Error();
+      console.log(integer.toString(16));
+    } catch {
+      console.log("Not a valid integer.");
+    }
   }
 }
