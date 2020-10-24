@@ -10,9 +10,15 @@ To use it, simply type `deno run https://deno.land/x/kek/mod.ts --help` in your 
 $ deno run https://deno.land/x/kek/mod.ts --help
 List of commands and their description:
 
-  test:           This command is for testing this deno module.
-  anotherCommand: This is the description of another command.
-  ...:            ...
+  test:         This command is for testing this deno module.
+  hex2string:   Converts a hex value to a string.
+  string2hex:   Converts a string to a hex value.
+  hex2int:      Converts hex to integer.
+  int2hex:      Converts integer to hex.
+  base64:       Converts the provided string to base64.
+  base64decode: Decodes a base64 encoded string.
+  md5:          Computes the MD5 checksum of a given string.
+  sha1:         Computes the SHA1 checksum of a given string.
 
 Syntax:
   deno run https://deno.land/x/kek/mod.ts <command>
