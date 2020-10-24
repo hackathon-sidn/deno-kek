@@ -1,7 +1,7 @@
 import { AbstractCommand } from "./abstract-command.ts";
 import { Args, ArgParsingOptions } from "https://deno.land/std@0.74.0/flags/mod.ts";
 
-export default class Hex2String extends AbstractCommand {
+export default class Base64Decode extends AbstractCommand {
   getShortDescription(): string {
     return "Decodes a base64 encoded string.";
   }
