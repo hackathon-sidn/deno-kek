@@ -10,12 +10,12 @@ import {
 
 export default class Hash extends AbstractCommand {
   getShortDescription(): string {
-    return "Computes the hash of a given string. See --help to see all supported hash algorithms.";
+    return "Computes the hash of a given string.";
   }
 
   help(): void {
     const message = `
-    Computes the hash of a given string.
+    ${this.getShortDescription()}
 
     Following hash algorithms are supported:
 
