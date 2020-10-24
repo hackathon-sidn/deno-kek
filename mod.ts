@@ -13,7 +13,7 @@ if (!commandName || commandName.startsWith("-")) {
   main();
 }
 
-async function main() {
+function main() {
   const command = commands[commandName]();
   const commandArgs = parse(Deno.args.slice(1), treatHelpAsBoolOption(command.getArgParsingOptions()));
 

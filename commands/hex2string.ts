@@ -1,5 +1,5 @@
 import { AbstractCommand } from "./abstract-command.ts";
-import { Args } from "https://deno.land/std@0.74.0/flags/mod.ts";
+import { Args, ArgParsingOptions } from "https://deno.land/std@0.74.0/flags/mod.ts";
 
 export default class Hex2String extends AbstractCommand {
   getShortDescription(): string {
@@ -14,12 +14,16 @@ export default class Hex2String extends AbstractCommand {
     `);
   }
 
+  getArgParsingOptions(): ArgParsingOptions {
+    return { string: "_" };
+  }
+
   run(args: Args): void {
-    if (Deno.args.length < 2) {
+    if (args.length < 1) {
       console.error("You have to input at least one string.");
       return;
     }
-    const hexInput = Deno.args[1].toString();
+    const hexInput = args._[0].toString();
     const hex = hexInput.startsWith("0x") ? hexInput.slice(2) : hexInput;
     let string = "";
     for (let i = 0; i < hex.length; i += 2) {

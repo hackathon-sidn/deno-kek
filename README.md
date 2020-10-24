@@ -1,4 +1,5 @@
 # kek - the deno module
+<!-- aka. Kommandoexekutionskonsole / Krampfhafte Entwicklungs-Kooperation / Knowledge Extending Karate -->
 
 ## Usage
 
