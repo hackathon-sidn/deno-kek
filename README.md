@@ -19,6 +19,7 @@ List of commands and their description:
   base64decode: Decodes a base64 encoded string.
   md5:          Computes the MD5 checksum of a given string.
   sha1:         Computes the SHA1 checksum of a given string.
+  hash:         Computes the hash of a given string.
 
 Syntax:
   deno run https://deno.land/x/kek/mod.ts <command>
