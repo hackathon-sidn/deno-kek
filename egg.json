@@ -1,0 +1,24 @@
+{
+  "$schema": "https://x.nest.land/eggs@0.3.0/src/schema.json",
+  "name": "kek",
+  "entry": "/mod.ts",
+  "description": "This module is a collection of simple scripts that a developer might find handy.",
+  "homepage": "https://github.com/hackathon-sidn/deno-kek",
+  "unstable": false,
+  "unlisted": false,
+  "version": "0.0.7",
+  "releaseType": "patch",
+  "files": [
+    "./mod.ts",
+    "./commands/**/*",
+    "./helpers/**/*",
+    "./README.md"
+  ],
+  "ignore": [
+    ".git"
+  ],
+  "checkFormat": "deno fmt",
+  "checkTests": "deno test",
+  "checkInstallation": true,
+  "check": true
+}
