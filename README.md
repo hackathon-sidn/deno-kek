@@ -1,6 +1,8 @@
 # kek - the deno module
 <!-- aka. Kommandoexekutionskonsole / Krampfhafte Entwicklungs-Kooperation / Knowledge Extending Karate -->
 
+[![nest badge](https://nest.land/badge-large.svg)](https://nest.land/package/kek)
+
 ## Usage
 
 This module is a collection of simple scripts that a developer might find handy.
@@ -20,6 +22,8 @@ List of commands and their description:
   md5:          Computes the MD5 checksum of a given string.
   sha1:         Computes the SHA1 checksum of a given string.
   hash:         Computes the hash of a given string.
+  cm2inch:      Converts cm to inch.
+  inch2cm:      Converts inch to cm.
 
 Syntax:
   deno run https://deno.land/x/kek/mod.ts <command>
